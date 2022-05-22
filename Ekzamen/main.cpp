@@ -16,16 +16,6 @@ int main()
 	HWND windowHandle = GetConsoleWindow();
 	ShowWindow(windowHandle, SW_MAXIMIZE);
 	int play1 = 0, play2 = 1;
-	/*
-	for (int i = 0; i < 256; i++)
-	{
-		cout << i << " -> " << (char)i << "\t";
-		if (i%6==0)
-		{
-			cout << "\n";
-		}
-	}
-	*/
 	play1 = rand() % 2;
 	if (play1 == 1)
 	{
