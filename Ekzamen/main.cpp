@@ -8,11 +8,11 @@
 
 using namespace std;
 
-int main() 
+int main()
 {
 	srand(time(0));
 	setlocale(LC_ALL, "Russian");
-	char map[9] = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+	char map[9] = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
 	HWND windowHandle = GetConsoleWindow();
 	ShowWindow(windowHandle, SW_MAXIMIZE);
 	int play1 = 0, play2 = 1;
@@ -34,40 +34,36 @@ int main()
 	else {
 		play2 = 1;
 	}
-	int st,xod=0;
+	int st,close;
 	int vod = -1;
 	char sin = ' ';
-	for (int i = 0;true; i++)
+	for (int i = 0; true; i++)
 	{
 		int win = 0;
-		cout << "\n\n\n";
-		cout << "\t\t\tКлетоки: \n       (цыфра на клавиатуре это клетке в игре)\n";
-		cout << "\t\t  1   |   2   |   3   " << endl;
-		cout << "\t\t  4   |   5   |   6   " << endl;
-		cout << "\t\t  7   |   8   |   9   " << endl;
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+		cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t\tКлетоки: \n\t\t\t\t\t\t\t\t\t\t\t\t(цыфра на клавиатуре это клетке в игре)\n";
+		cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t  1   |   2   |   3   " << endl;
+		cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t  4   |   5   |   6   " << endl;
+		cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t  7   |   8   |   9   " << endl;
 
-		cout << "\t\t\t Игра\n" << endl;
-		cout << "\t\t  " << map[0] << "   |   " << map[1] << "   |   " << map[2] << endl;
-		cout << "\t\t  " << map[3] << "   |   " << map[4] << "   |   " << map[5] << endl;
-		cout << "\t\t  " << map[6] << "   |   " << map[7] << "   |   " << map[8] << endl;
+		cout << "\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t Игра\n" << endl;
+		cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t  " << map[0] << "   |   " << map[1] << "   |   " << map[2] << endl;
+		cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t  " << map[3] << "   |   " << map[4] << "   |   " << map[5] << endl;
+		cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t  " << map[6] << "   |   " << map[7] << "   |   " << map[8] << endl;
 
-		cout << "\tИгрок 1\t\t\t      Игрок 2";
+		cout << "\t\t\t\t\t\t\t\t\t\t\t\tИгрок 1\t\t\t       Игрок 2";
 		if (play1 == 1)
 		{
-			cout << "\n\t  " << (char)24;
+			cout << "\n\t\t\t\t\t\t\t\t\t\t\t\t  " << (char)24;
 			sin = 'X';
 		}
 		else {
-			cout << "\n\t\t\t\t\t" << (char)24;
+			cout << "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t         " << (char)24;
 			sin = 'O';
 		}
-
-
-
-
-
+		cout << "\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
 		// проверка горизонталей
-		for (int j = 0; j < 9; j += 3) 
+		for (int j = 0; j < 9; j += 3)
 		{
 			if (map[j] != ' ' && map[j] == map[j + 1] && map[j] == map[j + 2])
 			{
@@ -75,7 +71,7 @@ int main()
 			}
 		}
 		// прверка вертикалей
-		for (int j = 0; j < 3; j++) 
+		for (int j = 0; j < 3; j++)
 		{
 			if (map[j] != ' ' && map[j] == map[j + 3] && map[j] == map[j + 6])
 			{
@@ -95,9 +91,8 @@ int main()
 		if (false)
 		{
 		Wins:
-			system("cls");
-			cout << "\n\n\n\n\n\t\t\tУ нас есть побидитель!!!";
-			cout << "\n\t\tРеванш?(Enter -> yes)(Esc -> no)";
+			cout << "\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t У нас есть побидитель!!!";
+			cout << "\n\t\t\t\t\t\t\t\t\t\t\t\t     Реванш?(Enter -> yes)(Esc -> no)";
 			st = _getch();
 			if (st == 27)
 			{
@@ -115,18 +110,26 @@ int main()
 				continue;
 			}
 			else {
-					system("cls");
-					cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tError.....\t\t\t\t\t";
-					Sleep(2000);
-					ShowWindow(windowHandle, SW_HIDE);
-					exit(0);
+				system("cls");
+				cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tError.....\t\t\t\t\t";
+				Sleep(2000);
+				ShowWindow(windowHandle, SW_HIDE);
+				exit(0);
 			}
 		}
 		// При отсутсвие побидителя
-		if (i == 9)
+		close = 0;
+		for (int j = 0; j < 9; j++)
 		{
-			cout << "\n\n\n\n\n\t\t\tУ нас ничья!!!";
-			cout << "\n\t\tЕщё раз?(Enter -> yes)(Esc -> no)";
+			if (map[j]!=' ')
+			{
+				close++;
+			}
+		}
+		if (close == 9)
+		{
+			cout << "\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t У нас ничья!!!";
+			cout << "\n\t\t\t\t\t\t\t\t\t\t\t\t     Ещё раз?(Enter -> yes)(Esc -> no)";
 			st = _getch();
 			if (st == 27)
 			{
@@ -194,21 +197,9 @@ int main()
 			continue;
 		}
 		map[vod] = sin;
-		swap(play1, play2);
+		std::swap(play1, play2);
 		std::system("cls");
 	}
-
-	
-	for (int i = 0; true; i++)
-	{
-		st = _getch();
-		cout << " " << st;
-		ShowWindow(windowHandle, SW_HIDE);
-		exit(0);
-	}
-	
-
-
 
 	return 0;
 }
