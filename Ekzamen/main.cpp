@@ -146,6 +146,13 @@ int main()
 				ShowWindow(windowHandle, SW_MAXIMIZE);
 				continue;
 			}
+			else {
+				system("cls");
+				cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tError.....\t\t\t\t\t";
+				Sleep(2000);
+				ShowWindow(windowHandle, SW_HIDE);
+				exit(0);
+			}
 
 		}
 
